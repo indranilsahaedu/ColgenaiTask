@@ -1,7 +1,80 @@
 **ECMS - Email Campaign Management System**
 ---------------------------------------
 
-This project is developed using Django.
+**Project Overview**
+
+The Email Campaign Management System (ECMS) is a web-based application developed using the Django framework that allows users to create, schedule, and manage bulk email campaigns efficiently.
+
+The system enables administrators to upload recipient lists through CSV files, schedule campaigns for future delivery, and automatically send emails using an SMTP mail server. It also tracks delivery status for each email and provides a dashboard to monitor campaign progress in real time.
+
+This project demonstrates backend development, database management, email automation, scheduling mechanisms, and reporting capabilities.
+
+**Key Features**
+1. Campaign Management
+
+Create and schedule email campaigns.
+
+Define campaign name, subject, content, and scheduled sending time.
+
+Track campaign status (Scheduled, Running, Completed).
+
+**2. Recipient Management**
+
+Upload recipient lists using CSV files.
+
+Automatically store recipient details in the database.
+
+Validate and manage subscriber email addresses.
+
+**3. Automated Email Scheduling**
+
+Emails are automatically sent when the scheduled time is reached.
+
+Uses SMTP configuration for email delivery.
+
+No manual intervention required.
+
+**4. Campaign Dashboard**
+
+Displays all campaigns with key metrics:
+
+Total Recipients
+
+Emails Sent
+
+Failed Emails
+
+Campaign Status
+
+Allows users to view detailed delivery logs.
+
+**5. Delivery Logging**
+
+Tracks the status of each email delivery.
+
+Logs include:
+
+Recipient email
+
+Delivery status
+
+Failure reason (if any)
+
+**Timestamp**
+
+6. Campaign Reporting
+
+After campaign completion, a CSV summary report is generated.
+
+The report includes delivery statistics and email status.
+
+The report is automatically emailed to the administrator.
+
+**7. Campaign Control**
+
+View campaign details and delivery logs.
+
+Delete campaigns from the dashboard.
 
 **Features**
 --------

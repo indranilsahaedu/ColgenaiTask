@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Campaign Delivery Logs</h2>
+
+<table>
+
+<tr>
+<th>Email</th>
+<th>Status</th>
+<th>Failure Reason</th>
+<th>Sent Time</th>
+</tr>
+
+{% for log in logs %}
+
+<tr>
+
+<td>{{log.recipient_email}}</td>
+
+<td>
+
+{% if log.status == "Sent" %}
+<span style="color:green;font-weight:bold;">Sent</span>
+{% else %}
+<span style="color:red;font-weight:bold;">Failed</span>
+{% endif %}
+
+</td>
+
+<td>{{log.failure_reason}}</td>
+
+<td>{{log.sent_time}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+{% endblock %}

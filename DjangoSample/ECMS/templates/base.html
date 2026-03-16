@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Email Campaign Management System</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Email Campaign Management System</h1>
+
+<nav>
+
+<a href="/">Dashboard</a>
+<a href="/create/">Create Campaign</a>
+<a href="/upload/">Upload Recipients</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</body>
+
+</html>

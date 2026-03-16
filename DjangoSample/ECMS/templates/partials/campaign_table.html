@@ -1,0 +1,32 @@
+{% for campaign in campaigns %}
+
+<tr>
+
+<td>{{campaign.campaign_name}}</td>
+
+<td>{{campaign.status}}</td>
+
+<td>{{campaign.total_recipients}}</td>
+
+<td>{{campaign.sent_count}}</td>
+
+<td>{{campaign.failed_count}}</td>
+
+<td>
+{{campaign.sent_count}} / {{campaign.total_recipients}}
+</td>
+
+<td>
+
+<a href="/campaign/{{campaign.id}}/">View</a>
+
+<a href="/campaign/delete/{{campaign.id}}/"
+style="color:white;background:red;padding:5px 10px;border-radius:5px;text-decoration:none;">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}

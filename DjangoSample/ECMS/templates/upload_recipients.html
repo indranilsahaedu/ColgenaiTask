@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+<h2>Upload Recipients</h2>
+
+<p>Upload CSV file containing recipient list.</p>
+
+<pre>
+name,email
+Rahul Sharma,rahul@gmail.com
+Priya Singh,priya@gmail.com
+</pre>
+
+<form method="post" enctype="multipart/form-data">
+
+{% csrf_token %}
+
+{{form.file}}
+
+<br>
+
+<button class="btn btn-success" type="submit">
+Upload CSV
+</button>
+
+</form>
+
+</div>
+
+{% endblock %}

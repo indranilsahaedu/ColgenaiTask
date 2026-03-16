@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Campaign Dashboard</h2>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<th>Name</th>
+<th>Status</th>
+<th>Total</th>
+<th>Sent</th>
+<th>Failed</th>
+<th>Progress</th>
+<th>Action</th>
+</tr>
+
+<tbody id="campaign-table">
+
+{% for campaign in campaigns %}
+
+<tr>
+
+<td>{{campaign.campaign_name}}</td>
+
+<td>{{campaign.status}}</td>
+
+<td>{{campaign.total_recipients}}</td>
+
+<td>{{campaign.sent_count}}</td>
+
+<td>{{campaign.failed_count}}</td>
+
+<td>
+{{campaign.sent_count}} / {{campaign.total_recipients}}
+</td>
+
+<td>
+
+<a href="/campaign/{{campaign.id}}/">View</a>
+
+<a href="/campaign/delete/{{campaign.id}}/"
+style="color:white;background:red;padding:5px 10px;border-radius:5px;text-decoration:none;"
+onclick="return confirm('Delete this campaign?')">
+Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+<script>
+
+function refreshTable(){
+
+fetch("/ajax/campaigns/")
+
+.then(response => response.text())
+
+.then(data => {
+
+document.getElementById("campaign-table").innerHTML = data;
+
+});
+
+}
+
+setInterval(refreshTable,5000)
+
+</script>
+
+{% endblock %}

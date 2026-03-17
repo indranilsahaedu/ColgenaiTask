@@ -10,7 +10,7 @@ The system enables administrators to upload recipient lists through CSV files, s
 This project demonstrates backend development, database management, email automation, scheduling mechanisms, and reporting capabilities.
 
 **Key Features**
-1. Campaign Management
+**1. Campaign Management**
 
 Create and schedule email campaigns.
 
@@ -60,9 +60,9 @@ Delivery status
 
 Failure reason (if any)
 
-**Timestamp**
+Timestamp
 
-6. Campaign Reporting
+**6. Campaign Reporting**
 
 After campaign completion, a CSV summary report is generated.
 
@@ -75,16 +75,6 @@ The report is automatically emailed to the administrator.
 View campaign details and delivery logs.
 
 Delete campaigns from the dashboard.
-
-**Features**
---------
-- Upload recipients via CSV
-- Schedule email campaigns
-- Automatic email sending via SMTP
-- Campaign dashboard with progress tracking
-- Delivery logs
-- Campaign report generation (CSV)
-- Automatic report email to admin
 
 **Project Requirements**
 --------------------
